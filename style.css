@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Epilogue;
+    src: url(textFont/Epilogue-VariableFont_wght.ttf);
+}
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Epilogue;
+}
+html{
+    font-size: 18px;
+}
