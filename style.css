@@ -2,6 +2,7 @@
     font-family: Epilogue;
     src: url(textFont/Epilogue-VariableFont_wght.ttf);
 }
+
 *,
 ::before,
 ::after {
@@ -9,7 +10,129 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Epilogue;
+    z-index: 0;
 }
-html{
+
+html {
     font-size: 18px;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+/* HEADER */
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.header-logo-and-links {
+    display: flex;
+}
+
+.header-logo {
+    margin-right: 3em;
+}
+
+.header-logo-and-links nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5em;
+}
+
+.header-logo-and-links nav ul li a,
+.header-logo-and-links nav ul li p {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    color: #696969;
+    cursor: pointer;
+}
+
+.header-logo-and-links nav ul li p span {
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    background-image: url(images/icon-arrow-down.svg);
+    background-position: center;
+    background-size: cover;
+    margin-left: .2em;
+}
+
+.dropDown {
+    position: relative;
+}
+.dropDown:hover .dropDown-items{
+    transform: scaleY(1);
+}
+
+.dropDown-items {
+    position: absolute;
+    background: #fff;
+    top: 200%;
+    right: 50%;
+    padding: 2em 1.5em;
+    border-radius: .5em;
+    box-shadow: 0 0 10px #696969;
+    transform-origin: bottom;
+    transition: .3s ease;
+    transform: scaleY(0);
+    transition-delay: .3s;
+}
+
+.dropDown-items a {
+    color: #696969;
+}
+.dropDown-items a:hover{color: #000;}
+
+.dropDown-items.items-1 ul li a img {
+    margin-right: 1em;
+}
+
+.dropDown-items.items-2 {
+    right: -10%;
+}
+
+.dropDown-items ul {
+    flex-direction: column;
+}
+
+.header-reg a {
+    margin-right: 2em;
+    text-decoration: none;
+    color: #696969;
+}
+
+.header-reg a:last-child {
+    border: .15em solid #696969;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+header a:hover,
+header p:hover {
+    color: #000;
+}
+
+
+
+:root{
+    --sub-menu: 0;
+}
+.open-dropdown{
+    --sub-menu: 1;
 }
