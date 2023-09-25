@@ -13,43 +13,39 @@
     <div class="container">
         <div class="container-content">
             <header>
-                <div class="header-content">
-                    <div class="header-logo-and-links">
-                        <div class="header-logo">
+                <div class="header-content-lg">
+                    <div class="header-logo">
+                        <div class="logo">
                             <img src="images/logo.svg">
                         </div>
                         <nav>
                             <ul>
                                 <li>
-                                    <div class="dropDown">
-                                        <div class="dropDown-btn">
-                                            <p>Features<span class="arrow"></span></p>
+                                    <div class="dropdown">
+                                        <div class="dropdown-btn">
+                                            <span>Features <img src="images/icon-arrow-down.svg"></span>
                                         </div>
-                                        <div class="dropDown-items items-1">
+                                        <div class="dropdown-items">
                                             <ul>
-                                                <li><a href="#"><img src="images/icon-todo.svg">todo list</a></li>
-                                                <li><a href="#"><img src="images/icon-calendar.svg">calendar</a>
-                                                </li>
-                                                <li><a href="#"><img src="images/icon-reminders.svg">reminder</a>
-                                                </li>
-                                                <li><a href="#"><img src="images/icon-planning.svg">planning</a>
-                                                </li>
+                                                <li><a href="#"><img src="images/icon-todo.svg">Todo List</a></li>
+                                                <li><a href="#"><img src="images/icon-calendar.svg">Calender</a></li>
+                                                <li><a href="#"><img src="images/icon-reminders.svg">Reminders</a></li>
+                                                <li><a href="#"><img src="images/icon-planning.svg">Planning</a></li>
                                             </ul>
                                         </div>
-
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="dropDown">
-                                        <div class="dropDown-btn">
-                                            <p>Company<span class="arrow"></span></p>
-                                            <div class="dropDown-items items-2">
-                                                <ul>
-                                                    <li><a href="#">history</a></li>
-                                                    <li><a href="#">our team</a></li>
-                                                    <li><a href="#">blog</a></li>
-                                                </ul>
-                                            </div>
+                                    <div class="dropdown">
+                                        <div class="dropdown-btn">
+                                            <span>Company <img src="images/icon-arrow-down.svg"></span>
+                                        </div>
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#">History</a></li>
+                                                <li><a href="#">Our Team</a></li>
+                                                <li><a href="#">Blog</a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
@@ -63,13 +59,90 @@
                         <a href="#">Register</a>
                     </div>
                 </div>
+                <div class="header-content-sm">
+                    <div class="header-logo">
+                        <img src="images/logo.svg">
+                    </div>
+                    <img src="images/icon-menu.svg" onclick="openMenu()">
+                    <div class="header-menu" id="header-menu">
+                        <img src="images/icon-close-menu.svg" class="close" onclick="closeMenu()">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <div class="dropdown">
+                                        <div class="dropdown-btn">
+                                            <span>Features <img src="images/icon-arrow-down.svg"></span>
+                                        </div>
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#"><img src="images/icon-todo.svg"
+                                                            onclick="closeMenu()">Todo List</a></li>
+                                                <li><a href="#"><img src="images/icon-calendar.svg"
+                                                            onclick="closeMenu()">Calender</a></li>
+                                                <li><a href="#"><img src="images/icon-reminders.svg"
+                                                            onclick="closeMenu()">Reminders</a></li>
+                                                <li><a href="#"><img src="images/icon-planning.svg"
+                                                            onclick="closeMenu()">Planning</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <div class="dropdown-btn">
+                                            <span>Company <img src="images/icon-arrow-down.svg"></span>
+                                        </div>
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#" onclick="closeMenu()">History</a></li>
+                                                <li><a href="#" onclick="closeMenu()">Our Team</a></li>
+                                                <li><a href="#" onclick="closeMenu()">Blog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#" onclick="closeMenu()">Careers</a></li>
+                                <li><a href="#" onclick="closeMenu()">About</a></li>
+                                <div class="reg">
+                                    <li><a href="#" onclick="closeMenu()">Login</a></li>
+                                    <li><a href="#" class="Register" onclick="closeMenu()">Register</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </header>
+            <div class="main">
+                <div class="main-content">
+                    <div class="work">
+                        <div class="work-info">
+                            <h1>Make remote work</h1>
+                            <p>Get your team in sync, no matter your location. Streamline processes, create team
+                                rituals, and watch productivity soar.</p>
+                            <a href="#">Learn more</a>
+                            <div class="client">
+                                <img src="images/client-databiz.svg">
+                                <img src="images/client-audiophile.svg">
+                                <img src="images/client-meet.svg">
+                                <img src="images/client-maker.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-img-wrapper"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
     <script>
+
+        var header_menu = document.getElementById("header-menu");
+        function openMenu() {
+            header_menu.style.right = 0;
+        }
+        function closeMenu() {
+            header_menu.style.right = -80 + "%";
+        }
     </script>
 </body>
 
