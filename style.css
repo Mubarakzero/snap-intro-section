@@ -140,7 +140,10 @@ body {
 }
 
 
-
+.main{
+    z-index: -1;
+    position: absolute;
+}
 .work-info h1 {
     font-size: 3rem;
     width: 61%;
